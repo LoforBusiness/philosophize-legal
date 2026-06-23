@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Philosophize</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500&display=swap');
+
+    :root {
+      --sage:     #7A9E87;
+      --sage-lt:  #EAF1EC;
+      --ink:      #1E1E1E;
+      --muted:    #6B6B6B;
+      --rule:     #D4E2D8;
+      --bg:       #F5F4F0;
+      --white:    #FFFFFF;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 18px;
+      line-height: 1.75;
+    }
+
+    /* ── Header ── */
+    header {
+      background: var(--white);
+      border-bottom: 1px solid var(--rule);
+      padding: 2.5rem 2rem 2rem;
+      text-align: center;
+    }
+
+    .app-name {
+      font-size: 2rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+    }
+
+    .doc-title {
+      font-size: 1.1rem;
+      color: var(--sage);
+      margin-top: 0.25rem;
+      font-style: italic;
+    }
+
+    .effective-date {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-top: 0.5rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    /* ── Layout ── */
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 3rem 2rem 6rem;
+    }
+
+    /* ── Table of contents ── */
+    .toc {
+      background: var(--white);
+      border: 1px solid var(--rule);
+      border-left: 3px solid var(--sage);
+      border-radius: 6px;
+      padding: 1.5rem 1.75rem;
+      margin-bottom: 3rem;
+    }
+
+    .toc-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--sage);
+      margin-bottom: 0.75rem;
+    }
+
+    .toc ol {
+      padding-left: 1.25rem;
+    }
+
+    .toc li {
+      margin: 0.3rem 0;
+    }
+
+    .toc a {
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.15s;
+    }
+
+    .toc a:hover { color: var(--sage); }
+
+    /* ── Sections ── */
+    section {
+      margin-bottom: 3rem;
+    }
+
+    .section-rule {
+      border: none;
+      border-top: 1px solid var(--rule);
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 1rem;
+      padding-top: 0.25rem;
+    }
+
+    h2 .section-num {
+      color: var(--sage);
+      margin-right: 0.4rem;
+    }
+
+    h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--sage);
+      margin: 1.5rem 0 0.5rem;
+      font-style: italic;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      color: var(--ink);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0.5rem 0 1rem 0;
+    }
+
+    ul li {
+      padding: 0.25rem 0 0.25rem 1.5rem;
+      position: relative;
+      color: var(--ink);
+    }
+
+    ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.85rem;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--sage);
+    }
+
+    a {
+      color: var(--sage);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    /* ── Contact block ── */
+    .contact-block {
+      background: var(--white);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 1.25rem 1.5rem;
+      margin-top: 1rem;
+      display: inline-block;
+    }
+
+    .contact-block p {
+      margin: 0.2rem 0;
+      font-size: 0.95rem;
+    }
+
+    .contact-block strong {
+      font-weight: 600;
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-style: italic;
+      color: var(--muted);
+      font-size: 0.9rem;
+      border-top: 1px solid var(--rule);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      body { font-size: 16px; }
+      .app-name { font-size: 1.5rem; }
+      main { padding: 2rem 1.25rem 4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="app-name">Philosophize</div>
+  <div class="doc-title">Privacy Policy</div>
+  <div class="effective-date">Effective Date: June 23, 2025</div>
+</header>
+
+<main>
+
+  <nav class="toc" aria-label="Table of contents">
+    <div class="toc-label">Contents</div>
+    <ol>
+      <li><a href="#s1">Information We Collect</a></li>
+      <li><a href="#s2">How We Use Your Information</a></li>
+      <li><a href="#s3">Data Storage and Security</a></li>
+      <li><a href="#s4">Premium Subscriptions</a></li>
+      <li><a href="#s5">Third-Party Services</a></li>
+      <li><a href="#s6">Data Retention</a></li>
+      <li><a href="#s7">Your Rights and Choices</a></li>
+      <li><a href="#s8">Children&#8217;s Privacy</a></li>
+      <li><a href="#s9">Changes to This Policy</a></li>
+      <li><a href="#s10">Contact Us</a></li>
+    </ol>
+  </nav>
+
+  <p>Thank you for using Philosophize. This Privacy Policy explains how we collect, use, and protect your information when you use our Android application. We are committed to transparency and to keeping your data minimal and secure.</p>
+  <p>Account registration is entirely optional. You can use Philosophize without creating an account. If you choose to register, you gain access to additional features such as saved progress and cross-device sync. By downloading or using Philosophize, you agree to the practices described in this policy.</p>
+
+  <hr class="section-rule" />
+
+  <section id="s1">
+    <h2><span class="section-num">1.</span> Information We Collect</h2>
+
+    <h3>1.1 Guest Users (No Account)</h3>
+    <p>If you use Philosophize without registering, we do not collect any personally identifiable information. Anonymous usage data and analytics may still be collected as described in Section 1.4.</p>
+
+    <h3>1.2 Registered Users</h3>
+    <p>If you choose to create an account, we collect the following information:</p>
+    <ul>
+      <li>Email address (if registering with email and password)</li>
+      <li>Display name and profile information linked to your Google account (if registering with Google Sign-In)</li>
+      <li>A unique user identifier generated at account creation</li>
+    </ul>
+    <p>We do not collect your phone number, physical address, or payment information directly. Passwords are securely hashed and never stored in plain text.</p>
+
+    <h3>1.3 Account-Linked Data</h3>
+    <p>When you are signed in, the following data is saved to your account and stored securely in our database:</p>
+    <ul>
+      <li>Lesson progress and completion history</li>
+      <li>Bookmarks and favorited content</li>
+      <li>Streak and experience point (XP) data</li>
+      <li>App preferences and settings</li>
+    </ul>
+    <p>This data is tied to your account so it can be restored if you reinstall the app or switch devices. It is not shared with third parties.</p>
+
+    <h3>1.4 Automatically Collected Information</h3>
+    <p>Regardless of account status, certain technical data is collected automatically when you use the app:</p>
+    <ul>
+      <li>Device type, operating system version, and app version</li>
+      <li>In-app events and interactions</li>
+      <li>Crash logs and performance diagnostics</li>
+      <li>General usage patterns and session duration</li>
+    </ul>
+
+    <h3>1.5 Advertising Data (Free Users)</h3>
+    <p>If you use the free version of Philosophize, ads are displayed via Google AdMob. AdMob may collect and use data to serve personalized or non-personalized ads, including:</p>
+    <ul>
+      <li>Device identifiers (such as the Android Advertising ID)</li>
+      <li>IP address and approximate location</li>
+      <li>Ad interaction data (impressions, clicks)</li>
+    </ul>
+    <p>Google AdMob operates under Google&#8217;s own privacy policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></p>
+
+    <h3>1.6 Analytics Data</h3>
+    <p>We use PostHog to understand how users interact with the app. PostHog collects anonymized usage data. For registered users, analytics events may be associated with your anonymous user ID but are never linked to your email address or real name.</p>
+  </section>
+
+  <hr class="section-rule" />
+
+  <section id="s2">
+    <h2><span class="section-num">2.</span> How We Use Your Information</h2>
+    <p>We use the information we collect to:</p>
+    <ul>
+      <li>Create and manage your optional user account</li>
+      <li>Sync your progress, bookmarks, streaks, and preferences across devices</li>
+      <li>Operate, maintain, and improve Philosophize</li>
+      <li>Diagnose bugs, crashes, and technical issues</li>
+      <li>Understand which features and content resonate with users</li>
+      <li>Display relevant advertisements to free-tier users via Google AdMob</li>
+      <li>Process and manage premium subscriptions via RevenueCat</li>
+    </ul>
+    <p>We do not sell your personal data. We do not use your data for any purpose beyond those listed above.</p>
+  </section>
+
+  <hr class="section-rule" />
+
+  <section id="s3">
+    <h2><span class="section-num">3.</span> Data Storage and Security</h2>
+    <p>Account data for registered users is stored securely using Supabase, a managed cloud database platform. Supabase provides encryption at rest and in transit, and operates on industry-standard infrastructure. You can review Supabase&#8217;s security practices at: <a href="https://supabase.com/security" target="_blank" rel="noopener">supabase.com/security</a></p>
+    <p>Passwords are never stored in plain text. Google Sign-In authentication is handled entirely by Google — we only receive a secure token confirming your identity.</p>
+    <p>While we take reasonable technical measures to protect your data, no system is completely secure. We encourage you to use a strong, unique password if registering with email.</p>
+  </section>
+
+  <hr class="section-rule" />
+
+  <section id="s4">
+    <h2><span class="section-num">4.</span> Premium Subscriptions</h2>
+    <p>If you upgrade to a premium (ad-free) subscription, your purchase is processed through the Google Play Store. We do not handle your payment information directly. Subscription entitlements are managed through RevenueCat.</p>
+    <p>RevenueCat may collect limited data necessary to validate and manage your subscription status. Review their privacy policy at: <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">revenuecat.com/privacy</a></p>
+  </section>
+
+  <hr class="section-rule" />
+
+  <section id="s5">
+    <h2><span class="section-num">5.</span> Third-Party Services</h2>
+    <p>Philosophize integrates the following third-party services, each governed by their own privacy policies:</p>
+    <ul>
+      <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google AdMob</a> — advertising</li>
+      <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Sign-In</a> — authentication</li>
+      <li><a href="https://posthog.com/privacy" target="_blank" rel="noopener">PostHog</a> — product analytics</li>
+      <li><a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase</a> — account data storage</li>
+      <li><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a> — subscription management</li>
+    </ul>
+  </section>
+
+  <hr class="section-rule" />
+
+  <section id="s6">
+    <h2><span class="section-num">6.</span> Data Retention</h2>
+    <p>Account data is retained for as long as your account is active. If you delete your account, your personal information and all account-linked data (progress, bookmarks, streaks, preferences) will be permanently deleted from our systems within 30 days.</p>
+    <p>Anonymized analytics data may be retained by PostHog per their own retention policies. Crash logs and diagnostics are typically retained for 90 days.</p>
+  </section>
+
+  <hr class="section-rule" />
+
+  <section id="s7">
+    <h2><span class="section-num">7.</span> Your Rights and Choices</h2>
+
+    <h3>7.1 Use Without an Account</h3>
+    <p>You may use Philosophize at any time without registering. No account is required to access the core app experience.</p>
+
+    <h3>7.2 Access and Correction</h3>
+    <p>If you have a registered account, you can review and update your profile information at any time from within the app settings.</p>
+
+    <h3>7.3 Account Deletion</h3>
+    <p>You may delete your account at any time from the app settings. Deleting your account will permanently remove your email address, profile, and all associated data from our systems within 30 days.</p>
+
+    <h3>7.4 Opt Out of Personalized Ads</h3>
+    <p>You can opt out of personalized advertising through your Android device settings:</p>
+    <ul>
+      <li>Go to Settings &gt; Google &gt; Ads</li>
+      <li>Enable &#8220;Opt out of Ads Personalization&#8221; or reset your Advertising ID</li>
+    </ul>
+    <p>Upgrading to a premium subscription removes all ads entirely.</p>
+
+    <h3>7.5 Data Portability</h3>
+    <p>If you would like a copy of the data associated with your account, please contact us at the email below and we will fulfill your request within 30 days.</p>
+  </section>
+
+  <hr class="section-rule" />
+
+  <section id="s8">
+    <h2><span class="section-num">8.</span> Children&#8217;s Privacy</h2>
+    <p>Philosophize is not directed at children under the age of 13. We do not knowingly collect personal information from children. If you believe a child has created an account or provided personal data through the app, please contact us immediately and we will remove it promptly.</p>
+  </section>
+
+  <hr class="section-rule" />
+
+  <section id="s9">
+    <h2><span class="section-num">9.</span> Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. When we do, we will update the effective date at the top of this document. Significant changes will be communicated via an in-app notice. Continued use of Philosophize after changes are posted constitutes your acceptance of the updated policy.</p>
+  </section>
+
+  <hr class="section-rule" />
+
+  <section id="s10">
+    <h2><span class="section-num">10.</span> Contact Us</h2>
+    <p>If you have questions, concerns, or requests related to this Privacy Policy or your account data, please contact us:</p>
+    <div class="contact-block">
+      <p><strong>App:</strong> Philosophize</p>
+      <p><strong>Email:</strong> <a href="mailto:philosophizelearn@gmail.com">philosophizelearn@gmail.com</a></p>
+    </div>
+    <p style="margin-top:1rem;">We are committed to responding to all privacy-related inquiries within 30 days.</p>
+  </section>
+
+</main>
+
+<footer>
+  Philosophize &#8212; Know Thyself.
+</footer>
+
+</body>
+</html>
