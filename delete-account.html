@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delete Your Account — Philosophize</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --sage:    #7A9E87;
+      --sage-lt: #EEF3F0;
+      --ink:     #1C1C1A;
+      --muted:   #6B6B68;
+      --border:  #D8DDD9;
+      --bg:      #F5F4F0;
+    }
+
+    html { font-size: 16px; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      line-height: 1.65;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── Header ── */
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .logo-mark {
+      width: 36px;
+      height: 36px;
+      background: var(--sage);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .logo-mark span {
+      font-family: 'EB Garamond', serif;
+      font-size: 1.35rem;
+      font-weight: 500;
+      color: #F5F4F0;
+      line-height: 1;
+      padding-top: 2px;
+    }
+
+    .logo-text {
+      font-family: 'EB Garamond', serif;
+      font-size: 1.2rem;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      color: var(--ink);
+    }
+
+    /* ── Main ── */
+    main {
+      flex: 1;
+      max-width: 680px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 4rem 2rem 6rem;
+    }
+
+    .eyebrow {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--sage);
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-family: 'EB Garamond', serif;
+      font-size: 2.4rem;
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--ink);
+      margin-bottom: 1rem;
+    }
+
+    .lead {
+      color: var(--muted);
+      font-size: 1.05rem;
+      margin-bottom: 3rem;
+      max-width: 520px;
+    }
+
+    /* ── Steps ── */
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin-bottom: 3rem;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .step {
+      display: flex;
+      gap: 1.25rem;
+      padding: 1.5rem 1.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .step:last-child { border-bottom: none; }
+
+    .step-num {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--sage-lt);
+      border: 1.5px solid var(--sage);
+      color: var(--sage);
+      font-size: 0.8rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .step-body strong {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 0.25rem;
+      color: var(--ink);
+    }
+
+    .step-body p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .step-body a {
+      color: var(--sage);
+      text-decoration: none;
+      border-bottom: 1px solid var(--sage);
+    }
+
+    .step-body a:hover { opacity: 0.75; }
+
+    /* ── Data section ── */
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .data-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 3rem;
+    }
+
+    .data-cell {
+      background: #fff;
+      padding: 1.25rem 1.5rem;
+    }
+
+    .data-cell .label {
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.4rem;
+    }
+
+    .data-cell .value {
+      font-size: 0.95rem;
+      color: var(--ink);
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 0.15rem 0.6rem;
+      border-radius: 99px;
+      font-size: 0.78rem;
+      font-weight: 500;
+    }
+
+    .pill-deleted { background: #FDE8E8; color: #B91C1C; }
+    .pill-kept    { background: var(--sage-lt); color: #3B6E52; }
+
+    /* ── Notice ── */
+    .notice {
+      background: var(--sage-lt);
+      border-left: 3px solid var(--sage);
+      border-radius: 0 8px 8px 0;
+      padding: 1.1rem 1.4rem;
+      font-size: 0.92rem;
+      color: var(--muted);
+      margin-bottom: 3rem;
+    }
+
+    .notice strong { color: var(--ink); }
+
+    /* ── Contact card ── */
+    .contact-card {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.75rem;
+      background: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .contact-card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .contact-card strong { color: var(--ink); display: block; margin-bottom: 0.25rem; }
+
+    .btn {
+      display: inline-block;
+      background: var(--sage);
+      color: #F5F4F0;
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 0.65rem 1.4rem;
+      border-radius: 8px;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: opacity 0.15s;
+    }
+
+    .btn:hover { opacity: 0.85; }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.5rem 2rem;
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    footer a { color: var(--muted); }
+
+    /* ── Responsive ── */
+    @media (max-width: 560px) {
+      h1 { font-size: 1.9rem; }
+      .data-grid { grid-template-columns: 1fr; }
+      .contact-card { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-mark"><span>P</span></div>
+    <span class="logo-text">Philosophize</span>
+  </header>
+
+  <main>
+    <p class="eyebrow">Account &amp; Privacy</p>
+    <h1>Delete your account</h1>
+    <p class="lead">
+      You can request deletion of your Philosophize account and all associated data at any time.
+      Here's how.
+    </p>
+
+    <!-- Steps -->
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <strong>Send a deletion request</strong>
+          <p>
+            Email us at <a href="mailto:philosophizelearn@gmail.com?subject=Delete%20My%20Account">philosophizelearn@gmail.com</a>
+            with the subject line <em>"Delete My Account"</em>. Include the email address
+            associated with your account so we can locate it.
+          </p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <strong>We confirm your request</strong>
+          <p>
+            We'll reply within 3 business days to confirm we've received your request
+            and verify your identity.
+          </p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <strong>Your account is deleted</strong>
+          <p>
+            Once confirmed, your account and all personal data will be permanently
+            deleted within 30 days.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Data breakdown -->
+    <p class="section-label">What happens to your data</p>
+    <div class="data-grid">
+      <div class="data-cell">
+        <div class="label">Deleted</div>
+        <div class="value">
+          <span class="pill pill-deleted">Account profile</span><br><br>
+          <span class="pill pill-deleted">Saved progress</span><br><br>
+          <span class="pill pill-deleted">Bookmarks</span><br><br>
+          <span class="pill pill-deleted">Streaks &amp; XP</span><br><br>
+          <span class="pill pill-deleted">Authentication data</span>
+        </div>
+      </div>
+      <div class="data-cell">
+        <div class="label">Retained</div>
+        <div class="value">
+          <span class="pill pill-kept">Anonymized analytics</span><br><br>
+          <p style="font-size:0.85rem; color: var(--muted); margin-top:0.5rem;">
+            Aggregate, non-identifiable usage data may be retained for up to 30 days
+            after deletion for product improvement purposes.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="notice">
+      <strong>Note on subscription data.</strong> If you have an active subscription,
+      cancelling it through Google Play before requesting deletion ensures no further
+      charges. Account deletion does not automatically cancel a subscription.
+    </div>
+
+    <!-- Contact -->
+    <div class="contact-card">
+      <div>
+        <strong>Questions about your data?</strong>
+        <p>Reach out any time — we typically respond within 1–2 business days.</p>
+      </div>
+      <a class="btn" href="mailto:philosophizelearn@gmail.com">Contact us</a>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Philosophize &nbsp;·&nbsp;
+    <a href="#">Privacy Policy</a>
+  </footer>
+
+</body>
+</html>
